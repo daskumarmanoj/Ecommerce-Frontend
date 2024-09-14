@@ -1,0 +1,12 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.Main_Grid{
+  width: 90%;
+  margin: 50px auto;
+}
+.Main_Grid h4,h6{
+  font-family: "Poppins", sans-serif;
+}

@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Navbar Css */
+.navbar {
+  font-size: 15px;
+  line-height: 1.5;
+  background: linear-gradient(to bottom, #9AF2FF, #FFFFFF);
+  background-color: #ffffff;
+  color: #333;
+  border-bottom: 1px solid #eaeaea;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  margin: 0; 
+  position: fixed;
+  top: 0;
+  width: 100%; 
+  z-index: 1000; 
+}
+.logo {
+  height: 50px; /* Adjust the height as needed */
+  width: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add some space between the logo and the brand name */
+}
+
+
+.navbar-brand {
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #007bff;
+}
+
+.nav-link {
+  color: #555;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 0.5rem 1rem; /* Adjusted padding for consistency */
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+.active {
+  border-bottom: 2px solid #007bff;
+}
+
+.nav-item {
+  margin-left: 10px; /* Adjusted margin for proper spacing */
+}
+
+.nav-item.dropdown .dropdown-menu {
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+}
+
+.nav-item.dropdown .dropdown-menu .dropdown-item {
+  color: #333;
+  padding: 0.5rem 1rem; /* Adjusted padding for dropdown items */
+}
+
+.nav-item.dropdown .dropdown-menu .dropdown-item:hover {
+  background-color: #f0f0f0;
+  color: #007bff;
+}
+
+.badge {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.search-input {
+  margin-right: 10px;
+}
+
+/* Ensure container spans full width */
+.container {
+  /* max-width: 100%; */
+  padding: 0; 
+  margin: 0 auto; 
+}
+
+/* Add top padding to the body to account for the fixed navbar height */
+body {
+  padding-top: 50px; /* Adjust this value based on the navbar height */
+}
+
+
+
+
+
+
+
+
+/* FOOTER  */
+.footer {
+  color: white;
+  padding: 25px;
+  background: linear-gradient(to right, #434343, #000000);
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+.footer a:hover {
+  color: blue;
+  border-bottom: 1px solid #ffefba;
+}

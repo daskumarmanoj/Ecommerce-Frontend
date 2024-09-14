@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mainGrid {
+  width: 90% !important;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.mainGrid .leftSide {
+  padding: 10px;
+}
+
+.mainGrid .rightSide {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: 7px;
+}
+
+.title {
+  color: blue;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.form {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+.form .lable_input_div {
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.lable_input_div .Lable {
+  font-size: large;
+  font-weight: 600;
+}

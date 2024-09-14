@@ -1,0 +1,38 @@
+.Main_Grid {
+  width: 90% !important;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Main_Grid .Right_Side {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  /* border: 1px solid red; */
+}
+
+.Heading {
+  color: #007bff;
+}
+
+.paper {
+  padding: 20px 5px;
+  margin-bottom: 20px;
+  /* border: 1px solid red; */
+}
+
+.tableContainer {
+  margin-top: 20px;
+}
+
+.actionButton {
+  margin-right: 10px !important;
+}
+
+@media (max-width: 900px) {
+  .Main_Grid .Right_Side {
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+}

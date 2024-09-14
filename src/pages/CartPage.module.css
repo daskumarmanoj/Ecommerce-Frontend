@@ -1,0 +1,58 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.Main_Grid {
+  margin-top: 50px;
+}
+.Left_Grid h1 {
+  color: blue;
+  font-family: "Poppins", sans-serif;
+}
+.Left_Grid p {
+  font-family: "Poppins", sans-serif;
+  font-size: large;
+}
+.Main_Grid .Right_Grid {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.Right_Grid .Cart_Grid 
+.Cart_Grid .cart_Item 
+.Cart_Grid .cart {
+  display: flex;
+  background-color: rgb(238, 234, 229);
+  margin-top: 5px;
+  border-radius: 5px;
+}
+.cart .img_div {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img_div img {
+  width: 50%;
+}
+.cart .details_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Right_Grid .Payment_Grid {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.paymentSummary {
+  width: 100%;
+  text-align: center;
+}

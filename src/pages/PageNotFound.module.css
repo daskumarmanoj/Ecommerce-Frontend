@@ -1,0 +1,38 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.page_not_found {
+  text-align: center;
+  padding: 50px;
+  background-color: #f8f9fa;
+  color: #343a40;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  font-size: 100px;
+  margin: 0;
+}
+
+.message {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.home_link {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  color: #ffffff;
+  background-color: #007bff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.home_link:hover {
+  background-color: #0056b3;
+  color: white;
+}

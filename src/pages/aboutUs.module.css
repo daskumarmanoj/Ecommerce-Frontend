@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.Main_Grid {
+  /* border: 1px solid red; */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6% !important;
+}
+
+.left_side img {
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid red; */
+}
+
+.Main_Grid .right_side {
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
+
+.right_side .message {
+  text-align: justify;
+  font-size: large;
+  font-family: "Poppins", sans-serif;
+}

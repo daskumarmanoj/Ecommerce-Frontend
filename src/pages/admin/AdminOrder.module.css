@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.Main_Grid {
+  width: 90% !important;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+}

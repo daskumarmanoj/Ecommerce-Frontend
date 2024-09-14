@@ -1,0 +1,101 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.Main_Grid {
+  width: 90% !important;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Right_grid .Heading {
+  color: #007bff;
+  font-size: 1.5rem;
+  margin-left: 15px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0px 20px;
+}
+
+.labelInputDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.labelInputDiv .lbl {
+  font-size: 1rem !important;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.select option {
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.photoLabel {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: rgb(22, 190, 22);
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  text-align: center;
+  width: 20%;
+}
+
+.photoPreview {
+  margin-top: 10px;
+}
+
+.imgResponsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.input,
+.textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.formContainer .submitButton {
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
