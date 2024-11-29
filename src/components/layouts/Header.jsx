@@ -29,7 +29,7 @@ const Header = () => {
         <div className="container">
           <img src={logo} alt="Logo" className="logo" />
           <Link to="/" className="navbar-brand">
-            E-commerce Application
+            E-Commerce 
           </Link>
           <button
             className="navbar-toggler"
