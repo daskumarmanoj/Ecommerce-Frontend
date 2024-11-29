@@ -1,9 +1,8 @@
-  * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 
 .Main_Grid {
   width: 88% !important;
@@ -34,7 +33,9 @@
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-direction: ; */
 }
 
 .MuiCheckbox-root {
@@ -64,14 +65,14 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* .Right_Side {
-  border: 1px solid red;
-} */
+.Main_Grid .Right_Side {
+  margin-top: 30px;
+}
 
 .All_Product {
   text-align: center;
   color: rgb(128, 0, 11);
-  text-shadow: 1px 1px 2px rgb(0, 26, 255);
+  /* text-shadow: 1px 1px 2px rgb(0, 26, 255); */
 }
 
 .Product_View_Div {
@@ -105,6 +106,8 @@
 .img_Box .Product_Img {
   width: 70%;
   object-fit: cover;
+  /* box-shadow: 1px 1px 20px lightblue; */
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
 }
 
 .Products_Body {

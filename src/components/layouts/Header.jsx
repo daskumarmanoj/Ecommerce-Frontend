@@ -29,7 +29,7 @@ const Header = () => {
         <div className="container">
           <img src={logo} alt="Logo" className="logo" />
           <Link to="/" className="navbar-brand">
-            MANOJ-BHAI STORE
+            E-commerce Application
           </Link>
           <button
             className="navbar-toggler"

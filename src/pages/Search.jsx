@@ -1,49 +1,67 @@
 import React from "react";
 import Layout from "../components/layouts/Layout";
 import { useSearch } from "../context/search";
+import { useNavigate } from "react-router-dom";
+import { Grid, Box, Button, Typography, Card, CardContent, CardActions } from "@mui/material";
 
 const Search = () => {
   const [values] = useSearch();
-  console.log('Search Values:', values); // Debugging log
+  const navigate = useNavigate();
 
   return (
     <Layout>
-      <div className="container">
-        <div className="text-center">
-          <h1>Search Results</h1>
-          <h6>
-            {values?.results.length < 1
-              ? "No Product Found"
-              : `Found ${values?.results.length}`}
-          </h6>
-          <div className="d-flex flex-wrap mt-4">
-            {values?.results.map((product) => (
-              <div
-                key={product._id}
-                className="card m-2"
-                style={{ width: "18rem" }}
-              >
-                <img
+      <Box className="container" sx={{ mt: 4, padding: 2 }}>
+        <Typography variant="h4" align="center" gutterBottom>
+          Search Results
+        </Typography>
+        <Typography variant="subtitle1" align="center" sx={{ mb: 4 }}>
+          {values?.results.length < 1
+            ? "No Product Found"
+            : `Found ${values?.results.length} Product(s)`}
+        </Typography>
+        <Grid container spacing={3}>
+          {values?.results.map((product) => (
+            <Grid item xs={12} sm={6} md={4} lg={3} key={product._id}>
+              <Card sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", height: "100%" }}>
+                <Box
+                  component="img"
                   src={`/api/v1/product/product-photo/${product._id}`}
-                  className="card-img-top"
                   alt={product.name}
+                  sx={{
+                    height: 200,
+                    objectFit: "cover",
+                    width: "80%",
+                    padding: 2,
+                    filter: "drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3))",
+                  }}
                 />
-                <div className="card-body">
-                  <h5 className="card-title">{product.name}</h5>
-                  <p className="card-text">
+
+                <CardContent>
+                  <Typography variant="h6" gutterBottom>
+                    {product.name}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" gutterBottom>
                     {product.description.substring(0, 30)}...
-                  </p>
-                  <p className="card-text">${product.price}</p>
-                  <button className="btn btn-primary ms-1">More Detail</button>
-                  <button className="btn btn-secondary ms-1">
-                    ADD TO CART
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+                  </Typography>
+                  <Typography variant="body1" color="primary">
+                    ${product.price}
+                  </Typography>
+                </CardContent>
+                <CardActions sx={{ mt: "auto" }}>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    fullWidth
+                    onClick={() => navigate(`/product/${product.slug}`)}
+                  >
+                    More Detail
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
     </Layout>
   );
 };

@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .mainContainer {
@@ -16,8 +16,10 @@
 }
 
 .productImage img {
-  width: 100%;
+  width: 90%;
   height: auto;
+  object-fit: cover;
+  mask-repeat: no-repeat;
 }
 
 .mainContainer .productInfo {

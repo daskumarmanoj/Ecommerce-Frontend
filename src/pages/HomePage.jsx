@@ -15,20 +15,8 @@ const HomePage = () => {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [checked, setChecked] = useState([]);
-  const [total, setTotal] = useState(10);
-  const [page, setPage] = useState(1);
-  const [loading, setLoading] = useState(false);
 
-  const getTotal = async () => {
-    try {
-      const { data } = await axios.get("/api/v1/category/get-count");
-      if (data.success) {
-        setTotal(data.count);
-      }
-    } catch (error) {
-      console.error("Error fetching total count:", error);
-    }
-  };
+
 
   const getAllCategory = async () => {
     try {
@@ -41,13 +29,11 @@ const HomePage = () => {
     }
   };
 
-  const getAllProducts = async (pageNumber = 1) => {
+  const getAllProducts = async () => {
     try {
-      setLoading(true);
       const { data } = await axios.get(
-        `/api/v1/product/get-product?page=${pageNumber}`
+        `/api/v1/product/get-product`
       );
-      setLoading(false);
       if (data.success) {
         setProducts((prevProducts) => {
           const newProducts = data.products.filter(
@@ -57,7 +43,6 @@ const HomePage = () => {
         });
       }
     } catch (error) {
-      setLoading(false);
       console.error("Error fetching products:", error);
     }
   };
@@ -77,13 +62,12 @@ const HomePage = () => {
   );
 
   useEffect(() => {
-    getTotal();
     getAllCategory();
   }, []);
 
   useEffect(() => {
-    getAllProducts(page);
-  }, [page]);
+    getAllProducts();
+  }, []);
 
   return (
     <Layout>
@@ -91,19 +75,21 @@ const HomePage = () => {
         <SwipeableTextMobileStepper />
       </Grid>
       <Grid container className={styles.Main_Grid}>
-        <Grid className={styles.Left_Side} item xs={12} sm={12} md={3} lg={3}>
+        <Grid className={styles.Left_Side} item xs={12} sm={12} md={12} lg={12}>
           <p className={styles.Filter_Heading}>Filter By Category</p>
-          <div data-aos="fade-right" className={styles.List_div}>
+          <Grid container data-aos="fade-right" className={styles.List_div}>
             {categories.map((c) => (
-              <Checkbox
-                key={c._id}
-                checked={checked.includes(c._id)}
-                onChange={(e) => handleFilter(e.target.checked, c._id)}
-              >
-                {c.name}
-              </Checkbox>
+              <Grid item xs={12} sm={6} md={2}>
+                <Checkbox
+                  key={c._id}
+                  checked={checked.includes(c._id)}
+                  onChange={(e) => handleFilter(e.target.checked, c._id)}
+                >
+                  {c.name}
+                </Checkbox>
+              </Grid>
             ))}
-          </div>
+          </Grid>
           <div className={styles.Reset_Grid}>
             <button
               className={styles.Reset_btn}
@@ -113,11 +99,11 @@ const HomePage = () => {
             </button>
           </div>
         </Grid>
-        <Grid className={styles.Right_Side} item xs={12} sm={12} md={8} lg={8}>
+        <Grid className={styles.Right_Side} item xs={12} sm={12} md={12} lg={12}>
           <h1 className={styles.All_Product}>All Products</h1>
           <Grid container spacing={2} className={styles.Product_View_Div}>
             {filteredProducts.map((product) => (
-              <Grid item xs={12} sm={6} md={4} lg={4} key={product._id}>
+              <Grid item xs={12} sm={6} md={3} lg={3} key={product._id}>
                 <div className={styles.Product_Card}>
                   <Box className={styles.img_Box}>
                     <img
@@ -173,7 +159,7 @@ const HomePage = () => {
               </Grid>
             ))}
           </Grid>
-          {products.length > 6 && products.length < total && (
+          {/* {products.length > 6 && products.length < total && (
             <div className={styles.Load_More_Container}>
               <button
                 className={styles.Load_More_Btn}
@@ -185,7 +171,7 @@ const HomePage = () => {
                 {loading ? "Loading..." : "Load More"}
               </button>
             </div>
-          )}
+          )} */}
         </Grid>
       </Grid>
     </Layout>

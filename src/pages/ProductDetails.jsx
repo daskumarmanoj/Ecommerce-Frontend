@@ -2,7 +2,7 @@ import Layout from "../components/layouts/Layout";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { Grid,Divider } from "@mui/material";
+import { Grid, Divider } from "@mui/material";
 import styles from "./ProductDetails.module.css";
 
 const ProductDetails = () => {
@@ -41,8 +41,12 @@ const ProductDetails = () => {
             <img
               src={`/api/v1/product/product-photo/${product._id}`}
               alt={product.name}
-              style={{ width: "100%", height: "auto" }}
+              style={{
+                width: "90%",
+                height: "auto",
+              }}
             />
+
           </Grid>
           <Grid item xs={12} md={6} className={styles.productInfo}>
             <h1>Product Details</h1>
