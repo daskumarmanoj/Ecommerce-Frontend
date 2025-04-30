@@ -12,6 +12,13 @@ import image2 from "../assets/image/4669213.jpg";
 import image3 from "../assets/image/5565175.jpg";
 import image4 from "../assets/image/5565179.jpg";
 
+// import image1 from "../assets/image/VagitableBanner1.jpg";
+// import image2 from "../assets/image/VagitableBanner2.jpg";
+// import image3 from "../assets/image/VagitableBanner3.jpg";
+// import image4 from "../assets/image/VagitableBanner4.jpg";
+
+
+
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
@@ -71,7 +78,7 @@ function SwipeableTextMobileStepper() {
               <Box
                 component="img"
                 sx={{
-                  height: 350,
+                  height: 450,
                   display: "block",
                   maxWidth: "100%",
                   overflow: "hidden",

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import toast from "react-hot-toast";
+// import toast from "react-hot-toast";
 import AdminMenu from "../../components/layouts/AdminMenu";
 import Layout from "../../components/layouts/Layout";
 import { useAuth } from "../../context/auth";
@@ -10,16 +10,16 @@ import styles from "./AdminOrder.module.css"
 import { Grid } from "@mui/material";
 
 const AdminOrder = () => {
-  const [status, setStatus] = useState([
+  const [status] = useState([
     "Not Process",
     "Processing",
     "Shipped",
     "Delivered",
     "Cancel",
   ]);
-  const [changeStatus, setChangeStatus] = useState("");
+  const [setChangeStatus] = useState("");
   const [orders, setOrders] = useState([]);
-  const [auth, setAuth] = useAuth();
+  const [auth] = useAuth();
 
   const getOrders = async () => {
     try {

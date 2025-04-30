@@ -172,6 +172,7 @@ const CartPage = () => {
     try {
       setLoading(true);
       const { nonce } = await instance.requestPaymentMethod();
+      // eslint-disable-next-line no-unused-vars
       const { data } = await axios.post("/api/v1/product/braintree/payment", {
         nonce,
         cart,

@@ -9,7 +9,7 @@ import { Grid, Card, CardContent, Table, TableBody, TableCell, TableHead, TableR
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
-  const [auth, setAuth] = useAuth();
+  const [auth] = useAuth();
 
   const getOrders = async () => {
     try {
@@ -59,7 +59,7 @@ const Orders = () => {
                 </Table>
                 <Container>
                   {o?.products?.map((product) => (
-                    <Card key={product._id} className="m-2 p-3" style={{ display: "flex", flexDirection: "row" }}>
+                    <Card key={product._id} className="m-2 p-3" style={{ display: "flex", flexDirection: "row",alignItems:"center",justifyContent:"space-between" }}>
                       <div className={styles.imageContainer}>
                         <img
                           src={`/api/v1/product/product-photo/${product._id}`}
@@ -72,6 +72,7 @@ const Orders = () => {
                         <p>{product.description.substring(0, 30)}</p>
                         <p>Price: {product.price}</p>
                       </CardContent>
+                      <button>Cancel Order</button>
                     </Card>
                   ))}
                 </Container>
